@@ -1,0 +1,6 @@
+def build(bld):
+    obj = bld.create_ns3_program('fuzzylite-demo-example', ['fuzzylite-demo'])
+    obj.source = 'fuzzylite-demo-example.cc'
+    obj.includes = [obj.includes, '/home/fuzzylite/fuzzylite']
+    obj.libpath = '/home/fuzzylite/release/bin'
+    obj.lib = 'fuzzylite'
